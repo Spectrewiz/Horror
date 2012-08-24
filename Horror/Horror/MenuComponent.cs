@@ -33,6 +33,7 @@ namespace Horror
             this.strings = strings;
         }
 
+        //all methods blow are "virtual" so they can be inherited and edited freely
         public virtual void LoadContent(ContentManager content)
         {
             spriteFont = content.Load<SpriteFont>("Fonts/MenuFont");
