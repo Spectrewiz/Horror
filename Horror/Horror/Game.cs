@@ -11,6 +11,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Horror
 {
+    //enum for Game State
     public enum State
     {
         game,
@@ -25,10 +26,14 @@ namespace Horror
 
     public class Game : Microsoft.Xna.Framework.Game
     {
+        //actual game state
         public static State gameState = State.menu;
+        //rectangles filling the entire stage and the entire screen area
         public static Rectangle stage, screen;
+        //the menu
         public static MenuComponent menuComponent, gameMenu;
 
+        //to switch the game state via a number (used with the menu indexes)
         public static void switchGameState(int index)
         {
             switch (index)
@@ -65,6 +70,7 @@ namespace Horror
         public Game()
         {
             graphics = new GraphicsDeviceManager(this);
+            //setting up rectangles
             stage = new Rectangle(0, 0, graphics.PreferredBackBufferWidth * 4, graphics.PreferredBackBufferHeight * 4);
             screen = new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
             Content.RootDirectory = "Content";
@@ -72,6 +78,7 @@ namespace Horror
 
         protected override void Initialize()
         {
+            //init menus
             menuComponent = new MenuComponent("Play", "Controls", "Map Editor", "Exit");
             gameMenu = new MenuComponent("Resume", "Controls", "Map Editor", "Exit");
 
@@ -80,6 +87,7 @@ namespace Horror
 
         protected override void LoadContent()
         {
+            //load the menus
             menuComponent.LoadContent(Content);
             gameMenu.LoadContent(Content);
             spriteBatch = new SpriteBatch(GraphicsDevice);
@@ -91,9 +99,11 @@ namespace Horror
 
         protected override void Update(GameTime gameTime)
         {
+            //switch what to update, so everything will not update at once (increase performance)
             switch (gameState)
             {
                 case State.menu:
+                    //update menu
                     menuComponent.Update(gameTime);
                     break;
             }
@@ -104,9 +114,11 @@ namespace Horror
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
+            //switch what to draw, so everything will not draw at once (increase performance)
             switch (gameState)
             {
                 case State.menu:
+                    //draw menu
                     spriteBatch.Begin();
                     menuComponent.Draw(spriteBatch);
                     spriteBatch.End();
