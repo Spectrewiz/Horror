@@ -1,0 +1,8 @@
+c:\users\nelson\documents\visual studio 2010\Projects\Horror\Horror\Horror\bin\x86\Debug\Horror.exe
+c:\users\nelson\documents\visual studio 2010\Projects\Horror\Horror\Horror\bin\x86\Debug\Horror.pdb
+c:\users\nelson\documents\visual studio 2010\Projects\Horror\Horror\Horror\obj\x86\Debug\Horror.csprojResolveAssemblyReference.cache
+c:\users\nelson\documents\visual studio 2010\Projects\Horror\Horror\Horror\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+c:\users\nelson\documents\visual studio 2010\Projects\Horror\Horror\Horror\obj\x86\Debug\Horror.exe
+c:\users\nelson\documents\visual studio 2010\Projects\Horror\Horror\Horror\obj\x86\Debug\Horror.pdb
+C:\Users\Nelson\documents\visual studio 2010\Projects\Horror\Horror\Horror\bin\x86\Debug\Content\Fonts\HUDfont.xnb
+C:\Users\Nelson\documents\visual studio 2010\Projects\Horror\Horror\Horror\bin\x86\Debug\Content\Fonts\MenuFont.xnb
