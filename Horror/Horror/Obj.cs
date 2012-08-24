@@ -7,5 +7,9 @@ namespace Horror
 {
     public class Obj
     {
+        public Obj()
+        {
+
+        }
     }
 }
