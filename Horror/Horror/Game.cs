@@ -64,8 +64,9 @@ namespace Horror
                     break;
             }
         }
-        GraphicsDeviceManager graphics;
+        public static GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        public static SpriteFont spriteFont;
 
         public Game()
         {

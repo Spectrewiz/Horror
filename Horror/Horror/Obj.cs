@@ -14,7 +14,7 @@ namespace Horror
 {
     public class Obj
     {
-        public int health, mana
+        public int health, mana,
             maxHealth, maxMana;
 
         KeyboardState key,
