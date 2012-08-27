@@ -64,6 +64,7 @@ namespace Horror
                     break;
             }
         }
+        public static void switchGameState(State gameState) { Game.gameState = gameState; }
         public static GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         public static SpriteFont spriteFont;

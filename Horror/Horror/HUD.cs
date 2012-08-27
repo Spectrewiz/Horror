@@ -28,8 +28,8 @@ namespace Horror
         public static Texture2D texture = new Texture2D(Game.graphics.GraphicsDevice, 1, 1),
             nonchangeableTexture = new Texture2D(Game.graphics.GraphicsDevice, 1, 1);
 
-        public static Rectangle hbar1 = new Rectangle(0, Game.screen.Height, /*Player.player.Health*/100, 50),
-            hbar2 = new Rectangle(0, Game.screen.Height, /*Player.player.maxHealth*/100, 50);
+        public static Rectangle hbar1 = new Rectangle(0, Game.screen.Height, Player.player.health, 50),
+            hbar2 = new Rectangle(0, Game.screen.Height, Player.player.maxHealth, 50);
 
         private static void HUD_Layout(SpriteBatch a)
         {
@@ -38,15 +38,15 @@ namespace Horror
         }
         private static void heartDisplay(SpriteBatch a)
         {
-            if ( /*Player.player.Health*/100 <= (/*Player.player.maxHealth*/100) && /*Player.player.Health*/100 > (/*Player.player.maxHealth*/100) / yellowHeartInt)
+            if ( Player.player.health <= (Player.player.maxHealth) && Player.player.health > (Player.player.maxHealth) / yellowHeartInt)
             {
                 changeHeartColor(HeartColor.Green);
             }
-            else if ( /*Player.player.Health*/100 <= (/*Player.player.maxHealth*/100 / yellowHeartInt) && /*Player.player.Health*/100 > (/*Player.player.maxHealth*/100) / blackHeartInt)
+            else if ( Player.player.health <= (Player.player.maxHealth / yellowHeartInt) && Player.player.health > (Player.player.maxHealth) / blackHeartInt)
             {
                 changeHeartColor(HeartColor.Yellow);
             }
-            else if ( /*Player.player.Health*/100 <= (/*Player.player.maxHealth*/100 / blackHeartInt) && /*Player.player.Health*/100 > 0)
+            else if ( Player.player.health <= (Player.player.maxHealth / blackHeartInt) && Player.player.health > 0)
             {
                 changeHeartColor(HeartColor.Red);
             }
@@ -64,7 +64,7 @@ namespace Horror
                 default:
                     texture.SetData(new[] { Color.Red });
                     break;
-                    a.DrawString(Game.spriteFont, "- Health[" + /*Player.player.Health*/100 + " / " + /*Player.player.maxHealth*/100 + "]", new Vector2(/*Player.player.maxHealth*/100 + 5, Game.screen.Height), Color.Magenta);
+                    a.DrawString(Game.spriteFont, "- Health[" + Player.player.health + " / " + Player.player.maxHealth + "]", new Vector2(Player.player.maxHealth + 5, Game.screen.Height), Color.Magenta);
                     a.Draw(texture, hbar1, Color.White);
                     a.Draw(nonchangeableTexture, hbar2, Color.White);
             }

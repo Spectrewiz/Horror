@@ -14,12 +14,12 @@ namespace Horror
 {
     public class Obj
     {
-        public int health, mana,
-            maxHealth, maxMana;
+        public int health, ammo,
+            maxHealth, maxAmmo;
 
-        KeyboardState key,
+        public KeyboardState key,
             prevKey;
-        MouseState mouse,
+        public MouseState mouse,
             prevMouse;
 
         public Vector2 velocity = Vector2.Zero, 
